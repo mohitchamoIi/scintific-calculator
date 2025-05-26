@@ -3,8 +3,9 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 // Functions
-#include"func.c"
+#include"func.h"
 
 void showMainMenu() {
     printf("\n\n===========================================\n");
@@ -19,13 +20,14 @@ void showMainMenu() {
     printf("-------------------------------------------\n");
     printf("1. Basic Calculator\n");
     printf("2. Scientific Calculator\n");
-    printf("3. Exit\n");
+    printf("3. Show History\n");
+    printf("4. Exit\n");
     printf("-------------------------------------------\n");
 }
 
 
 
-//main files
+//main function
 int main() {
     int choice;
     while (1) {
@@ -33,19 +35,22 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1:
-                basicCalculator();
-                break;
-            case 2:
-                scientificCalculator();
-                break;
-            case 3:
-                printf("\nThank you for using the calculator!\n");
-                exit(0);
-            default:
-                printf("Invalid choice! Please try again.\n");
-        }
+       switch (choice) {
+    case 1:
+        basicCalculator();
+        break;
+    case 2:
+        scientificCalculator();
+        break;
+    case 3:
+        showHistory();
+        break;
+    case 4:
+        printf("\nThank you for using the calculator!\n");
+        exit(0);
+    default:
+        printf("Invalid choice! Please try again.\n");
+}
     }
 
     return 0;
