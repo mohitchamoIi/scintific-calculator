@@ -1,0 +1,4 @@
+
+Subtraction: 5.00 - 3.00 = 2.00
+Sine of 30.00 degrees = 0.5000
+Square Root of 5.00 = 2.2361
